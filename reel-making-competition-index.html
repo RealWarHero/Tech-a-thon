@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reel Making Competition 2024</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Reel Making Competition 2024</h1>
+        <div id="countdown" class="countdown"></div>
+    </header>
+    <main>
+        <section class="details">
+            <h2>Competition Details</h2>
+            <p><strong>Venue:</strong> ARSD College Atrium, New Delhi-110021</p>
+            <p><strong>Date:</strong> October 27, 10:00 AM onwards</p>
+            <p><strong>Prize Money:</strong> Upto ₹2000 + Gifts!</p>
+            <p><strong>Eligibility:</strong> Undergraduate (any year)</p>
+        </section>
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <h3>Who can participate?</h3>
+            <p>Undergraduate (any year) from any college affiliated to UoD.</p>
+            <h3>What is the theme?</h3>
+            <p>Any creative and engaging topic that showcases your filmmaking skills!</p>
+        </section>
+        <section class="testimonials">
+            <h2>Previous Winners</h2>
+            <p>"It was a <b class="extra-bold">filmy</b> experience!" - 2023 Winner</p>
+        </section>
+        <section class="website">
+            <h2 id="website">Visit our Website</h2>
+            <a href="https://tech-a-thon.github.io/SanganakVimarsh2024/" class="website-button"> Website</a>
+        </section>
+        <section class="social-media">
+            <h2>Follow Us</h2>
+            <a href="https://x.com/intent/tweet?text=Instagram%20%3A%20Sanganak%20Vimarsh%20%20-%20https://tr.ee/kIhSyX2U_M" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="https://www.instagram.com/sanganak_vimarsh" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://linktr.ee/tech_a_thon" target="_blank"><i class="fas fa-link"></i> Linktree</a>
+        </section>
+    </main>
+    <section class="contact-details">
+        <h2>Contact Us</h2>
+        <p><strong>Name:</strong> Aanchal Pradhan</p>
+        <p><strong>Position:</strong> Event Head</p>
+        <p><strong>Mobile Number:</strong> +91 95995 12760</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Reel Making Competition (Reel Rush Rumble(Video Editing+ Treasure hunt) - SV'24). All Rights Reserved.</p>
+    </footer>
+    <script>
+        function logFormData() {
+            console.log("Name: " + document.getElementById("name").value);
+            console.log("Email: " + document.getElementById("email").value);
+            console.log("Suggestion: " + document.getElementById("suggestion").value);
+            return true; // Continue the form submission
+        }
+    </script>
+    <!-- Countdown Timer -->
+    <script>
+        var countDownDate = new Date("Oct 27, 2024 10:00:00").getTime();
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
